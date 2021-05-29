@@ -2,11 +2,11 @@
 
 ## Examples
 
-This directory contains 2 example services which share the [common][] package. 
+This directory contains 2 example services which share the [common](common) package. 
 
-[library-service][] implements the LibraryService interface and exposes it with RedisRemoteServer.
+[library-service](library-service) implements the LibraryService interface and exposes it with RedisRemoteServer.
 
-[reader-service][] starts a simple express server and communicates with [library-service][] with RedisRemoteClient.
+[reader-service](reader-service) starts a simple express server and communicates with [library-service](library-service) with RedisRemoteClient.
 
 ### Prerequisites
 
