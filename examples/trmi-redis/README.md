@@ -6,7 +6,7 @@ This directory contains 2 example services which share the [common](common) pack
 
 [library-service](library-service) implements the LibraryService interface and exposes it with RedisRemoteServer.
 
-[reader-service](reader-service) starts a simple express server and communicates with [library-service](library-service) with RedisRemoteClient.
+[reader-service](reader-service) starts a simple express server and communicates with [library-service](library-service) via RedisRemoteClient.
 
 ### Prerequisites
 
