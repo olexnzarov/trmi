@@ -1,0 +1,20 @@
+{
+  "name": "library-service",
+  "version": "1.0.0",
+  "main": "dist/library-service/src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "tsc",
+    "build:clean": "yarn clean && yarn build",
+    "dev": "yarn build:clean && node ."
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "trmi-redis": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.1",
+    "typescript": "^4.3.2"
+  }
+}
