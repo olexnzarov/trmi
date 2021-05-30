@@ -8,6 +8,7 @@ app.use(express.json());
 
 export const initialize = async () => {
     const remoteClient = await RedisRemoteClient.create({
+        handshake: 5000,
         settings: {
             host: '127.0.0.1',
             port: 6379,

@@ -8,12 +8,12 @@ This directory contains 2 example services which share the [common](common) pack
 
 [reader-service](reader-service) starts a simple express server and communicates with [library-service](library-service) via RedisRemoteClient.
 
-### Prerequisites
+## Prerequisites
 
 - yarn `npm i -g yarn`
 - Redis `docker run --name redis -d redis`
 
-### Instructions
+## Instructions
 
 **Setup and start the library-service**
 

@@ -491,19 +491,19 @@ toidentifier@1.0.0:
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
 
-trmi-redis@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/trmi-redis/-/trmi-redis-1.0.2.tgz#b4ea3dd57e71e4153c60d1e7f8ab39ac07ce39cc"
-  integrity sha512-HzlYnhf9uMEOuM1hyjKSY3wrsO6hZPFmjnKjalHLJoDGH9rlJJyQpqFqHS/FwLpHuVPV7u+KpENcdd13mjSrPA==
+trmi-redis@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/trmi-redis/-/trmi-redis-1.0.4.tgz#5e1c324686cbd5279f10f2f40767f4fd0c40a94d"
+  integrity sha512-r2na+74SMIEn3lvCBJH30dwUDbkXPlTkYAE7FEuCohNU/4Psz6u1GR+UMO2xrFbwMCmn35RiE1qBB80HWCwUNg==
   dependencies:
     ioredis "^4.27.3"
-    trmi "^1.0.3"
+    trmi "^1.0.4"
     uuid "^8.3.2"
 
-trmi@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/trmi/-/trmi-1.0.3.tgz#b093d1697d9ab5c7565f5f36162073f0803125af"
-  integrity sha512-WMGXgjdkpDc7nDk6R5R6leA2LuL/voB2ZM3Y/cPHZ9hyFvDT0ltcOdn8GIuccWRMEnY1AwQT5slOUdIv9vGM/g==
+trmi@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/trmi/-/trmi-1.0.4.tgz#6acd1de5b0d8d3f8b95ea0162783657788489da0"
+  integrity sha512-YtsmFkA/LGcWYfsGS1Z4gQTuVMRANAR3EV9Li1hMORAOcNbPHdc8SjRnl4MZnpRYyexHRTkhdC0ecpkv4wh1vw==
 
 type-is@~1.6.17, type-is@~1.6.18:
   version "1.6.18"

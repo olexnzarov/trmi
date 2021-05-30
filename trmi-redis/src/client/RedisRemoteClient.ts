@@ -8,7 +8,7 @@ import { TrackedPromise } from './TrackedPromise';
 
 export type RedisRemoteClientOptions = {
     timeout?: number;
-    handshakeTimeout?: number;
+    handshake?: number;
     settings: RedisOptions;
 };
 
@@ -51,7 +51,7 @@ export class RedisRemoteClient extends ClientEmitter implements RemoteClient {
         this.id = uuid();
         this.pool = createConnectionPool(options.settings);
         this.timeout = options.timeout ?? 30000;
-        this.handshakeTimeout = options.handshakeTimeout && options.handshakeTimeout > 0 ? options.handshakeTimeout : null;
+        this.handshakeTimeout = options.handshake && options.handshake > 0 ? options.handshake : null;
     }
 
     private onMessage(message: string) {

@@ -101,10 +101,10 @@ standard-as-callback@^2.1.0:
   resolved "https://registry.yarnpkg.com/standard-as-callback/-/standard-as-callback-2.1.0.tgz#8953fc05359868a77b5b9739a665c5977bb7df45"
   integrity sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==
 
-trmi@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/trmi/-/trmi-1.0.2.tgz#2bb3f329f1ce0310654d210e0d621239f3d14cef"
-  integrity sha512-vxhdP0H26VqSQDww9jExhKKTLlwGv5ofm6Gl0Gc5f6cEJtxkQG5DYA+QddJePNBYOBi7Cp1Ewes9NtXPqcQchg==
+trmi@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/trmi/-/trmi-1.0.4.tgz#6acd1de5b0d8d3f8b95ea0162783657788489da0"
+  integrity sha512-YtsmFkA/LGcWYfsGS1Z4gQTuVMRANAR3EV9Li1hMORAOcNbPHdc8SjRnl4MZnpRYyexHRTkhdC0ecpkv4wh1vw==
 
 typescript@^4.3.2:
   version "4.3.2"

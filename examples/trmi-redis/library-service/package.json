@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13",
-    "trmi-redis": "^1.0.2"
+    "trmi-redis": "^1.0.4"
   },
   "devDependencies": {
     "@types/node": "^15.6.1",
