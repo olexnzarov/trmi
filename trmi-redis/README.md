@@ -1,6 +1,4 @@
-# trmi-redis
-
-![npm](https://img.shields.io/npm/v/trmi-redis)
+# trmi-redis ![npm](https://img.shields.io/npm/v/trmi-redis)
 
 This is a Redis Pub/Sub RMI implementation with a horizontal scaling support.
 
