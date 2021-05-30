@@ -14,6 +14,8 @@ npm i trmi-redis
 
 ## Getting started
 
+You can find a more detailed example [here](https://github.com/alexnzarov/trmi/tree/master/examples/trmi-redis).
+
 **Define and implement a remote service**
 
 ```ts
@@ -66,7 +68,7 @@ RedisRemoteServer.create({
 **Start a remote client**
 
 ```ts
-import { RedisRemoteServer } from 'trmi-redis';
+import { RedisRemoteClient } from 'trmi-redis';
 
 const client = await RedisRemoteClient.create({
         handshake: 15000,
