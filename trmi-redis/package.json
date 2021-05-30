@@ -1,6 +1,6 @@
 {
   "name": "trmi-redis",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -10,6 +10,27 @@
     "build:clean": "yarn clean && yarn build",
     "prepublish": "yarn build:clean"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alexnzarov/trmi.git"
+  },
+  "author": {
+    "name": "alexnzarov",
+    "email": "alexnzarov@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/alexnzarov/trmi/issues"
+  },
+  "homepage": "https://github.com/alexnzarov/trmi/tree/master/trmi-redis#readme",
+  "keywords": [
+    "typescript",
+    "rmi",
+    "remote-method-invocation",
+    "trmi",
+    "trmi-redis",
+    "remote",
+    "invocation"
+  ],
   "dependencies": {
     "ioredis": "^4.27.3",
     "trmi": "^1.0.4",
