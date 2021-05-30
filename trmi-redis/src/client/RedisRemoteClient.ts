@@ -50,7 +50,7 @@ export class RedisRemoteClient extends ClientEmitter implements RemoteClient {
         this.calls = {};
         this.id = uuid();
         this.pool = createConnectionPool(options.settings);
-        this.timeout = options.timeout;
+        this.timeout = options.timeout ?? 30000;
         this.handshakeTimeout = options.handshakeTimeout && options.handshakeTimeout > 0 ? options.handshakeTimeout : null;
     }
 
@@ -113,14 +113,10 @@ export class RedisRemoteClient extends ClientEmitter implements RemoteClient {
             params
         };
 
-        try {
-            await this.pool.publisher.publish(
-                getServerChannelName(serviceName),
-                JSON.stringify(call)
-            );
-        } catch (e) {
-            if (!this.call('error', e)) { throw e; }
-        }
+        await this.pool.publisher.publish(
+            getServerChannelName(serviceName),
+            JSON.stringify(call)
+        );
 
         return await this.track(id);
     }

@@ -1,13 +1,14 @@
 import { RemoteServiceContainer, RemoteServer, RemoteCallResponse, ClientEmitter } from 'trmi';
 import { RedisOptions } from 'ioredis';
 import { metadata } from 'trmi';
-import { createConnectionPool, getServiceNameFromChannel, getServerChannelName, getClientChannelName } from '../util';
+import { createConnectionPool, getServiceNameFromChannel, getServerChannelName, getClientChannelName, lock } from '../util';
 import { RedisClientPool } from '../types/RedisClientPool';
 import { RedisRemoteCall } from '../types/RedisRemoteCall';
 import { RedisRemoteCallResponse } from '../types/RedisRemoteCallResponse';
 
 export type RedisRemoteServerOptions = {
     handshake?: boolean;
+    lock?: number;
     settings: RedisOptions;
 };
 
@@ -15,6 +16,7 @@ export class RedisRemoteServer extends ClientEmitter implements RemoteServer<Red
     private pool: RedisClientPool;
     private container: RemoteServiceContainer;
     private handshakeEnabled: boolean;
+    private lock: number;
 
     private constructor(options: RedisRemoteServerOptions) {
         super();
@@ -22,6 +24,7 @@ export class RedisRemoteServer extends ClientEmitter implements RemoteServer<Red
         this.pool = createConnectionPool(options.settings);
         this.container = new RemoteServiceContainer();
         this.handshakeEnabled = options.handshake ?? false;
+        this.lock = options.lock ?? 30000;
     }
 
     public get() {
@@ -63,6 +66,11 @@ export class RedisRemoteServer extends ClientEmitter implements RemoteServer<Red
 
     private async onMessage(channel, message) {
         const call: RedisRemoteCall = JSON.parse(message);
+        const acquired = await lock(this.pool.publisher, call.id, this.lock);
+        
+        if (!acquired) {
+            return;
+        }
 
         if (this.handshakeEnabled) {
             this.handshake(call);
