@@ -92,7 +92,7 @@ client.getService<HelloWorldSpecification>('MyServer_HelloWorld');
 
 **Authorization**
 
-By default, server accepts requests from everywhere. You can change that by passing a AuthorizationProvider instance.
+By default, server accepts requests from everywhere. You can change that by passing an AuthorizationProvider instance.
 
 ```ts
 HttpRemoteServer.create({ authorization: TokenAuthorizationProvider.create('secret'), ... });
