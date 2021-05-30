@@ -1,9 +1,6 @@
-import { RemoteMethodMiddleware } from '../types/RemoteMethodMiddleware';
 import { RMI_METHOD } from '../metadata';
 
-export type RemoteMethodOptions = {
-    middleware?: RemoteMethodMiddleware[];
-};
+export type RemoteMethodOptions = {};
 
 export const RemoteMethod = (options?: RemoteMethodOptions): MethodDecorator => {
     return (target: any, propertyKey: string | symbol, descriptor: PropertyDescriptor) => {
@@ -11,7 +8,6 @@ export const RemoteMethod = (options?: RemoteMethodOptions): MethodDecorator => 
             RMI_METHOD, 
             { 
                 name: propertyKey, 
-                middleware: options?.middleware ?? null,
             }, 
             target, 
             propertyKey

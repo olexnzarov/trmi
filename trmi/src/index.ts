@@ -6,7 +6,6 @@ export * from './types/RemoteCall';
 export * from './types/RemoteCallResponse';
 export * from './types/RemoteClient';
 export * from './types/RemoteMethodDefinition';
-export * from './types/RemoteMethodMiddleware';
 export * from './types/RemoteServer';
 export * from './types/RemoteServiceDefinition';
 

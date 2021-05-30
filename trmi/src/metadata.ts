@@ -18,9 +18,7 @@ export const getServiceDefinition = ({ prototype }: Function): RemoteServiceDefi
         .forEach((key) => {
             const meta =  Reflect.getMetadata(RMI_METHOD, prototype, key);
 
-            methods[meta.name] = {
-                middleware: meta.middleware,
-            };
+            methods[meta.name] = {};
         });
 
     return {

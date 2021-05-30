@@ -1,11 +1,9 @@
-import { RemoteMethodMiddleware } from '../types/RemoteMethodMiddleware';
 import { RMI_SERVICE } from '../metadata';
 import { RemoteServiceNameMissing } from '../exceptions/RemoteServiceNameMissing';
 import { InvalidRemoteServiceName } from '../exceptions/InvalidRemoteServiceName';
 
 export type RemoteServiceOptions = {
     name?: string;
-    middleware?: RemoteMethodMiddleware[];
 };
 
 export const RemoteService = (options?: RemoteServiceOptions): ClassDecorator => {
@@ -24,8 +22,7 @@ export const RemoteService = (options?: RemoteServiceOptions): ClassDecorator =>
             RMI_SERVICE, 
             { 
                 name: serviceName, 
-                middleware: options?.middleware ?? null,
-            }, 
+            },
             ctor.prototype
         );
     };
